@@ -1,0 +1,755 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+/* ////////////////////////////Globale/////////////////////////////// */
+.container{
+    width: 80%;
+    margin: auto;
+}
+.under-line{
+    width: 100px;
+    height: 3px;
+    background-color: blue;
+    margin: auto;
+    /* margin-top: -3px; */
+}
+a{
+    text-decoration: none;
+}
+/* /////////////////// home */
+.home{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../Images/background/background.webp);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.header{
+    width: 100%;
+    height: 55px;
+    background-color: rgba(148, 1, 11, 0.5);
+    position: fixed;
+    z-index: 10;
+    /* overflow: auto; */
+    top: 0;
+    left: 0;
+}
+.logo{
+    height: 55px;
+    float: left;
+    margin-left: 100px;
+}
+.header ul{
+    list-style: none;
+    float: right;
+    margin-right: 100px;
+}
+.header ul li{
+    display: inline-block;
+    width: 100px;
+    height: 25px;
+    background-color:rgba(148, 1, 11, 1);
+    margin-left: 20px;
+    margin-top: 15px;
+    text-align: center;
+    border-radius: 5px;
+    line-height: 25px;
+    cursor: pointer;
+    position: relative;
+}
+.header ul li:hover{
+    background-color: #fff;
+    border: 1px solid black;
+    font-weight: bold;
+}
+.header ul li:hover a{
+    color: black;
+}
+.header ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+.header ul li a::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: goldenrod;
+    bottom: -4px;
+    left: 3px;
+}
+.header ul li .line::after{
+    width: 95%;
+}
+.header ul li:hover a::after{
+    width: 95%;
+    transition: 2s;
+}
+.bob-up::before{
+    content: "Limited Offer";
+    position: absolute;
+    bottom: -50px;
+    left: -15px;
+    width: 130px;
+    height: 35px;
+    background-color: blue;
+    border-radius: 8px;
+    line-height: 35px;
+    display: none;
+    color: #fff;
+}
+.header ul li:hover .bob-up::before{
+    display: block;
+}
+.home-overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.home-info{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: #fff;
+    width: 80%;
+}
+.home-title{
+    font-size: 75px;
+    text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace;
+}
+.home-p{
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+.home-btn1 , .home-btn2{
+    padding: 18px;
+    font-size: 18px;
+    margin-top: 25px;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;  
+    text-transform: capitalize;
+    font-weight: bold;
+}
+.home-btn1{
+    margin-right: 30px;
+    background-color: rgba(148, 1, 11, 1);
+    color: #fff;
+}
+.home-btn1:hover , .home-btn2:hover{
+    opacity: .8;
+}
+/* /////////welcome/////////// */
+.welcome-title{
+    text-align: center;
+    font-size: 35px;
+    position: relative;
+    margin-top: 100px;
+    margin-bottom: 5px;
+}
+.welcome-parent{
+    height: 400px;
+    overflow: auto;
+    margin-top: 100px;
+
+}
+.welcome-card{
+    border: 1px solid ;
+    text-align: center;
+    float: left;
+    width: 30%;
+    padding: 20px 10px;
+    position: relative;
+    z-index: 1;
+}
+.center-card{
+    margin: 0 5%;
+
+}
+.welcome-card i{
+    font-size: 25px;
+    color: #6195ff;
+}
+.welcome-card-title{
+    font-size: 24px;
+    padding: 15px;
+}
+.welcome-card-p{
+    color: grey;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    padding: 10px 0;
+}
+.welcome-a{
+    color: #6195ff;
+    text-transform: capitalize;
+}
+.welcome-card::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: -1;
+}
+.welcome-card:hover::before{
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+}
+.welcome-card:hover .welcome-card-title{
+    color: #fff ;
+    transition: 0.5s;
+
+}
+/* //////////////sqaud///////////////// */
+.sqaud{
+    background-color: rgb(207, 206, 206);
+    padding: 100px 0;
+    overflow: auto;
+}
+.squad-title{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 50px;
+    text-transform: uppercase;
+    position: relative;
+}
+.sqaud-card{
+    width: 30%;
+    float: left;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    margin: 25px 0;
+}
+.sqaud-card img{
+    width: 100%;
+}
+.mid-card{
+    margin: 25px 5%;
+}
+.sqaud-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+}
+.sqaud-card:hover .sqaud-overlay{
+    visibility: visible;
+}
+.card-hero-image{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.sqaud-card-title{
+    color: #6195ff;
+    text-transform: uppercase;
+}
+.sqaud-card-p{
+    color: #fff;
+    font-size: 17px;
+    font-weight: bold;
+}
+.card-hero-image a{
+    background-color: #6195ff;
+    padding: 10px;
+    display: inline-block;
+    margin-top: 10px;
+    color: #fff;
+}
+/* ///////////////////////offer//////////////////////////// */
+.offer{
+    padding: 50px 0;
+    overflow: auto;
+}
+.offer-title{
+    text-align: center;
+    text-transform: capitalize;
+    margin-top: 100px;
+    font-size: 65px;
+}
+.offer-parent{
+    margin-top: 50px;
+}
+.offer-card{
+    border: 1px solid gray;
+    overflow: auto;
+    padding: 15px;
+    position: relative;
+    float: left;
+    width: 30%;
+    margin: 25px 0;
+}
+.offer .mid-card{
+    margin: 25px 5%;
+}
+.offer-card::after{
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(56, 56, 56);
+    z-index: -1;
+}
+.offer-card:hover::after{
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+}
+.offer-card:hover .offer-info-title{
+    color: #fff;
+    transition: 0.5s;
+}
+.offer-icon{
+    float: left;
+    margin-right: 10%;
+    width: 10%;
+}
+.offer-icon i{
+    font-size: 30px;
+    color: #6195ff;
+
+}
+.offer-info{
+    float: left;
+    width: 80%;
+}
+.offer-info-title{
+    font-size: 25px;
+}
+.offer-info-p{
+    color: gray;
+    line-height: 30px;
+    margin-top: 10px;
+}
+/* /////////////////////////why //////////////////////////// */
+.why{
+        width: 100%;
+        height: 100vh;
+    position: relative;
+}
+.why-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+.why-container{
+    width: 100%;
+    height: 100%;
+    background-color: #f9f9f9;
+}
+.why-parent{
+    overflow: auto;
+    padding-top: 100px;
+}
+.why-info{
+    float: left;
+    width: 50%;
+    margin-right: 20%;
+}
+.why-title{
+    font-size: 50px;
+
+}
+.why-info .under-line{
+    margin-left: 0;
+    margin-bottom: 50px;
+}
+.why-info p{
+    color: gray;
+    line-height: 25px;
+    margin-top: 20px;
+}
+.why-info i{
+    color: #6195ff;
+}
+.why-pic{
+    float: left;
+    width: 30%;
+    text-align: center;
+}
+.why-pic img{
+    width: 100%;
+    height: 70%;
+    margin-bottom: 10px;
+}
+.why-pic i{
+    color: gray;
+    margin-left: 10px;
+    font-size: 12px;
+}
+.why-pic .first{
+    color: #6195ff;
+}
+.why-pic i:hover{
+    color: #6195ff;
+    cursor: pointer;
+
+}
+.why-icons{
+    position: relative;
+    width: 100%;
+    height: 35vh;
+    background-image: url(../Images/background/background.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.why-icons-parent{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 80%;
+    color: #fff;
+    text-align: center;
+}
+.why-icons-desc{
+    float: left;
+    font-size: 25px;
+    width: 25%;
+}
+.why-icons-desc i{
+    color: #6195ff;
+    padding: 15px;
+    font-size: 35px;
+}
+/* ////////////////////pricing///////////////////// */
+.pricing{
+    background-color: #f9f9f9;
+    padding: 50px 0px;
+    overflow: auto;
+
+}
+.pricing-title{
+    text-align: center;
+    font-size: 40px;
+    margin-top: 100px;
+    margin-bottom: 10px;
+}
+.pricing-card{
+    float: left;
+    width: 30%;
+    border: 1px solid gray;
+    margin-top: 50px;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+.pricing-card::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+
+}
+.pricing-card:hover::after{
+    height: 100%;
+}
+.pricing-card:hover .pricing-card-title{
+    color: red;
+    transition: 0.5s;
+}
+.pricing-card:hover .pricing-circle{
+    color: red;
+    transition: 0.5s;
+}
+.pricing-card-title{
+    text-transform: uppercase;
+    color: gray;
+    margin-bottom: 25px;
+}
+.pricing .p{
+    color: gray;
+    line-height: 30px;
+}
+.pricing-circle{
+    width: 100px;
+    height: 100px;
+    border: 1px solid #6195ff;
+    border-radius: 50%;
+    margin: auto;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    padding: 5px;
+}
+.pricing-circle p{
+    font-size: 50px;
+}
+.pricing button{
+    width: 100px;
+    height: 30px;
+    border: 1px solid #6195ff;
+    margin-top: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+/* //////////////////////develop//////////////////////// */
+.develop{
+    width: 100%;
+    height: 300px;
+    background-image: url(../Images/background/Al+Ahly+champs.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;
+}
+.decelop-overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.devlop-parent{
+    padding-top: 60px;
+    overflow: auto;
+}
+.devlop-card{
+    width: 45%;
+    padding: 30px;
+    overflow: auto;
+    float: left;
+}
+.devlop-parent .first-card{
+    margin-right: 10%;
+}
+.devlop-card img{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin-right: 10px;
+}
+.devlop-info{
+    float: left;
+    height: 50px;
+}
+.develop-title{
+    color: #fff;
+    margin-bottom: 7px;
+}
+.develop-desc{
+    color: #6195ff;
+}
+
+.develop-p{
+    margin-top: 60px;
+    color: #fff;
+}
+/* /////////////////////////our-team///////////////////////// */
+.our-team{
+    margin: 50px 0;
+}
+.our-team-title{
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 50px;
+}
+.our-team-parent{
+    overflow: auto;
+    margin-top: 50px;
+}
+.our-team-card{
+    padding: 20px;
+    background-color: rgb(197, 197, 197);
+    width: 30%;
+    float: left;
+    margin-top: 25px;
+    text-align: center;
+    position: relative;
+}
+.our-team-img{
+    width: 100%;
+    height: 250px;
+    position: relative;
+}
+.our-team-img img{
+    width: 100%;
+    height: 100%;
+}
+.our-team-card-title{
+    font-size: 18px;
+    text-transform: capitalize;
+    padding: 8px;
+    font-weight: 400;
+}
+.our-team-card-p{
+    color: rgb(155, 154, 154);
+    text-transform: uppercase;
+    padding: 5px;
+    font-size: 18px;
+}
+.our-team-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    display: none;
+    z-index: 2;
+    opacity: 0.6;
+}
+.our-team-overlay a{
+    display: block;
+    font-size: 18px;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    margin-left: auto;
+    background-color: #6195ff;
+
+}
+.our-team-overlay a i{
+    line-height: 40px;
+}
+.our-team-card::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background-color: #333;
+    visibility: hidden;
+    opacity: 0.5;
+    z-index: 1;
+}
+.our-team-card:hover .our-team-overlay{
+    display: block;
+}
+.our-team-card:hover::after{
+    visibility: visible;
+    height: 100%;
+    transition: 1s;
+}
+.our-team-card:hover .our-team-card-title{
+    color: #fff;
+    transition: 1s;
+}
+.our-team-card:hover .our-team-card-p{
+    color: blue;
+    transition: 1s;
+}
+/* ///////////////////////news/////////////// */
+.news{
+    margin: 50px 0;
+}
+.news-title{
+    text-align: center;
+    font-size: 50px;
+    text-transform: uppercase;
+}
+.news-parent{
+    overflow: auto;
+}
+.news-card{
+    width: 30%;
+    float: left;
+    margin-top: 25px;
+    padding: 20px;
+    position: relative;
+}
+.news-image{
+    width: 100%;
+    height: 250px;
+}
+.news-image img{
+    width: 100%;
+    height: 100%;
+}
+.news-icons i ,.news-card a{
+    color: #6195ff;
+    text-transform: capitalize;
+}
+.news-icons{
+    margin: 20px 0;
+}
+.news-icons span{
+    margin-right: 15px;
+}
+.news-desc{
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    color: #999;
+}
+.news-card::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background-color: #6196ff6c;
+}
+.news-card:hover.news-card::after{
+    height: 100%;
+    transition: 1s;
+}
+/* /////////////////////footer/////////////////// */
+.footer{
+    width: 100%;
+    height: 300px;
+    background-color: rgb(82, 82, 82);
+    text-align: center;
+    padding: 50px;
+}
+.footer img{
+    border-radius: 30px;
+}
+.footer-icons{
+    margin: 20px 0;
+}
+.footer a{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #6195ff;
+    color: #fff;
+}
+.footer a:hover{
+    transition: 0.5s;
+    background-color: rgb(46, 97, 207);
+}
+.footer i{
+    line-height: 50px;
+    font-size: 20px;
+}
+.footer p{
+    color: #999;
+}
